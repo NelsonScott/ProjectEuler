@@ -125,7 +125,7 @@ def right_product(index1,index2,size,arr)
 end
 
 #I had a bug here where I only checked diagonally right and didn't
-#also look diagonally left.  Had to look it up to see my mistake
+#also look diagonally left.  Had to look it up to see my mistake, thanks http://stackoverflow.com/questions/6287348/project-euler-11
 def diagonal_product_right(index1,index2,size,arr)
 
 	if (index1+3)>19 || (index2+3)>19
