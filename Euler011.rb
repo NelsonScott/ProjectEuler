@@ -31,37 +31,28 @@ def adjacentProduct(g)
 	candidate = 0
 	i=0
 	while i<size
-		puts "Calling index i: #{i}"
 		k=0
 		while k<size
-			puts "Calling index k: #{k}"
 			if up_product(i,k,size,arr)>candidate
-				puts "Found from up"
 				candidate = up_product(i,k,size,arr)
 
 			elsif down_product(i,k,size,arr)>candidate
-				puts "Found from down"
 				candidate=down_product(i,k,size,arr)
 
 			elsif left_product(i,k,size,arr)>candidate
-				puts "Found from left"
 				candidate=left_product(i,k,size,arr)
 
 			elsif right_product(i,k,size,arr)>candidate
-				puts "Found from right"
 				candidate=right_product(i,k,size,arr)
 
 			elsif diagonal_product_right(i,k,size,arr)>candidate
-				puts "Found from diagonal right"
 				candidate=diagonal_product_right(i,k,size,arr)
 
 			elsif diagonal_product_left(i,k,size,arr)>candidate
-				puts "Found from diagonal left"
 				candidate=diagonal_product_left(i,k,size,arr)
 					
 					
 			end
-			puts "Current candidate value: #{candidate}"
 			k+=1
 		end
 		i+=1
@@ -125,7 +116,7 @@ def right_product(index1,index2,size,arr)
 end
 
 #I had a bug here where I only checked diagonally right and didn't
-#also look diagonally left.  Had to look it up to see my mistake
+#also look diagonally left.  Had to look it up to see my mistake, thanks http://stackoverflow.com/questions/6287348/project-euler-11
 def diagonal_product_right(index1,index2,size,arr)
 
 	if (index1+3)>19 || (index2+3)>19
