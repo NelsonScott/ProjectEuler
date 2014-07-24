@@ -6,9 +6,7 @@ def findLongest(limit)
 	i=2
 	goal = 0
 	while i<limit
-		puts "Testing: #{i}"
 		if !finite?(i)
-			puts "determined #{i} was not finite"
 			period = findPeriod(i)
 			if period > goal
 				goal = i
