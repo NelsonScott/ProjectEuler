@@ -33,4 +33,4 @@ def find_triangle(last_triangle, k)
 	return last_triangle+k
 end
 
-puts find_triangle_num
+# puts find_triangle_num
